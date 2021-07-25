@@ -8,6 +8,8 @@ ROUND=$4
 EPOCH=$5
 BATCH_SIZE=$6
 
+hostname > mpi_host_file
+
 mpirun -np 17 -hostfile ./mpi_host_file python3 ./main.py \
   --gpu $GPU \
   --model $MODEL \
