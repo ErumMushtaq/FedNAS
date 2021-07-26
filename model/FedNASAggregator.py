@@ -124,9 +124,13 @@ class FedNASAggregator(object):
                 local_sample_number, local_alpha = alpha_list[i]
                 w = local_sample_number / self.all_train_data_num
                 if i == 0:
-                    averaged_alphas[index] = local_alpha[index] * w
+                    alpha = local_alpha[index] * w
                 else:
-                    averaged_alphas[index] += local_alpha[index] * w
+                    alpha += local_alpha[index] * w
+                # if i == 0:
+                #     averaged_alphas[index] = local_alpha[index] * w
+                # else:
+                #     averaged_alphas[index] += local_alpha[index] * w
         end_time = time.time()
         logging.info("aggregate alphas time cost: %d" % (end_time - start_time))
         return averaged_alphas
