@@ -206,6 +206,7 @@ if __name__ == "__main__":
                  ", process ID = " + str(os.getpid()) +
                  ", process Name = " + str(psutil.Process(os.getpid())))
 
+
     # Set the random seed if provided (affects client sampling, and batching)
     # if a pseudorandom number generator is reinitialized with the same seed
     # it will produce the same sequence of numbers.
