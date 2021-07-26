@@ -108,9 +108,9 @@ def init_server(args, comm, rank, size, round_num):
                                                                                              args_alpha,
                                                                                              args=args)
     n_classes = len(np.unique(y_train))
-    logging.info("traindata_cls_counts = " + str(traindata_cls_counts))
-    logging.info("net_dataidx_map = " + str(net_dataidx_map))
-    logging.info("#####################")
+    # logging.info("traindata_cls_counts = " + str(traindata_cls_counts))
+    # logging.info("net_dataidx_map = " + str(net_dataidx_map))
+    # logging.info("#####################")
 
     all_train_data_num = sum([len(net_dataidx_map[r]) for r in range(args.client_number)])
     train_global, test_global = get_dataloader(args.dataset, args_datadir, args.batch_size, args.batch_size)
