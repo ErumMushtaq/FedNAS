@@ -179,7 +179,7 @@ def init_training_device(process_ID, size):
     gpu_number = args.gpu
 
     for client_index in range(size - 1):
-        gpu_index = (client_index % gpu_number) + 4
+        gpu_index = (client_index % gpu_number) 
         process_gpu_dict[client_index] = gpu_index
 
     logging.info(process_gpu_dict)
